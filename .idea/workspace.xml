@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="30c01b62-dd53-465b-befc-3aa99b1581f1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/NoviSignTestTask.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestTask.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/SlideshowApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/controller/ImageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/controller/SlideshowController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/event/ImageEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/event/ProofOfPlayEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/event/SlideshowEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/exception/BadRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/exception/InternalServerErrorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/listener/EventLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/model/EventLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/model/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/model/ProofOfPlay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/model/Slideshow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/repository/EventLogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/repository/ImageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/repository/ProofOfPlayRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/repository/SlideshowRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/EventLogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/ImageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/SlideshowService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/novisign/slideshow/SlideshowApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/novisign/slideshow/service/ImageServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/novisign/slideshow/service/SlideshowServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "DenysPiven"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/DenysPiven/NoviSignTestTask",
+    "accountId": "4b9882f6-eb6f-42e3-b396-740fcc44c3ef"
+  }
+}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/novisign/slideshow/controller/ImageController.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2qJYNZGHu7vi5u7NDl3LYJpFpxf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "JUnit.ImageServiceTest.executor": "Run",
+    "JUnit.ImageServiceTest.testAddImage.executor": "Run",
+    "JUnit.ImageServiceTest.testDeleteImage.executor": "Run",
+    "JUnit.ImageServiceTest.testIsValidImageUrl.executor": "Run",
+    "JUnit.SlideshowApplicationTests.executor": "Run",
+    "JUnit.SlideshowApplicationTests.testFullSlideshowWorkflow.executor": "Debug",
+    "JUnit.SlideshowServiceTest.executor": "Run",
+    "JUnit.SlideshowServiceTest.testDeleteSlideshow.executor": "Run",
+    "Maven.slideshow [clean].executor": "Run",
+    "Maven.slideshow [compile].executor": "Run",
+    "Maven.slideshow [install].executor": "Run",
+    "Maven.slideshow [test].executor": "Run",
+    "Maven.slideshow [validate].executor": "Run",
+    "Maven.slideshow [verify].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.SlideshowApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.SlideshowApplicationTests.testFullSlideshowWorkflow">
+    <configuration name="ImageServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="slideshow" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.novisign.slideshow.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.novisign.slideshow.service" />
+      <option name="MAIN_CLASS_NAME" value="com.novisign.slideshow.service.ImageServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImageServiceTest.testDeleteImage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="slideshow" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.novisign.slideshow.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.novisign.slideshow.service" />
+      <option name="MAIN_CLASS_NAME" value="com.novisign.slideshow.service.ImageServiceTest" />
+      <option name="METHOD_NAME" value="testDeleteImage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SlideshowApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="slideshow" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.novisign.slideshow.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.novisign.slideshow" />
+      <option name="MAIN_CLASS_NAME" value="com.novisign.slideshow.SlideshowApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SlideshowApplicationTests.testFullSlideshowWorkflow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="slideshow" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.novisign.slideshow.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.novisign.slideshow" />
+      <option name="MAIN_CLASS_NAME" value="com.novisign.slideshow.SlideshowApplicationTests" />
+      <option name="METHOD_NAME" value="testFullSlideshowWorkflow" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SlideshowServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="slideshow" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.novisign.slideshow.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.novisign.slideshow.service" />
+      <option name="MAIN_CLASS_NAME" value="com.novisign.slideshow.service.SlideshowServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SlideshowApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="slideshow" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.novisign.slideshow.SlideshowApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SlideshowApplicationTests.testFullSlideshowWorkflow" />
+        <item itemvalue="JUnit.SlideshowServiceTest" />
+        <item itemvalue="JUnit.ImageServiceTest" />
+        <item itemvalue="JUnit.ImageServiceTest.testDeleteImage" />
+        <item itemvalue="JUnit.SlideshowApplicationTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.145" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="30c01b62-dd53-465b-befc-3aa99b1581f1" name="Changes" comment="" />
+      <created>1734382105558</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1734382105558</updated>
+      <workItem from="1734382106735" duration="9597000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/ImageService.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/novisign/slideshow/SlideshowApplicationTests.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/novisign/slideshow/service/SlideshowServiceTest.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/novisign/slideshow/service/ImageServiceTest.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

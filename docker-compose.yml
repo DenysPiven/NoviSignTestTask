@@ -1,0 +1,28 @@
+
+services:
+  app:
+    build: .
+    container_name: slideshow-app
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/slideshow_db
+      SPRING_DATASOURCE_USERNAME: slideshow_user
+      SPRING_DATASOURCE_PASSWORD: password
+    depends_on:
+      - db
+
+  db:
+    image: postgres:17.2
+    container_name: slideshow-db
+    environment:
+      POSTGRES_DB: slideshow_db
+      POSTGRES_USER: slideshow_user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  pg_data:
