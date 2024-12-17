@@ -36,15 +36,28 @@ public class SlideshowService {
         Slideshow savedSlideshow = slideshowRepository.save(slideshow);
         logger.info("Slideshow added with ID: {}", savedSlideshow.getId());
         eventPublisher.publishEvent(new SlideshowEvent(this, "add", "Slideshow added with ID: " + savedSlideshow.getId()));
+        savedSlideshow.getImages().forEach(image -> {
+            String message = String.format("Image with URL %s added to Slideshow ID: %d", image.getUrl(), savedSlideshow.getId());
+            eventPublisher.publishEvent(new SlideshowEvent(this, "add-image", message));
+            logger.info("Event published for image: {}", image.getUrl());
+        });
         return savedSlideshow;
     }
 
     public void deleteSlideshow(Long id) {
         logger.debug("Entering deleteSlideshow method with ID: {}", id);
+        Slideshow slideshow = slideshowRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Slideshow not found with ID: " + id));
+        slideshow.getImages().forEach(image -> {
+            String message = String.format("Image with URL %s removed from Slideshow ID: %d", image.getUrl(), id);
+            eventPublisher.publishEvent(new SlideshowEvent(this, "delete-image", message));
+            logger.info("Event published for image removal: {}", image.getUrl());
+        });
         slideshowRepository.deleteById(id);
         logger.info("Slideshow deleted with ID: {}", id);
         eventPublisher.publishEvent(new SlideshowEvent(this, "delete", "Slideshow deleted with ID: " + id));
     }
+
 
     public Optional<Slideshow> getSlideshowById(Long id) {
         logger.debug("Entering getSlideshowById method with ID: {}", id);

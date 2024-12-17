@@ -91,43 +91,43 @@ mvn spring-boot:run
 
 ### **Image Management**
 1. **Add a new image**
-    - **Endpoint**: `POST /api/images/add`
+    - **Endpoint**: `POST /images/add`
     - **Description**: Adds a new image with a URL and duration.
     - **Request Body**:
       ```json
       {
-        "url": "http://example.com/image.jpg",
+        "url": "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
         "duration": 5
       }
       ```
 
 2. **Delete an image**
-    - **Endpoint**: `DELETE /api/images/delete/{id}`
+    - **Endpoint**: `DELETE /images/delete/{id}`
     - **Description**: Deletes an image by its ID.
 
 3. **Search images**
-    - **Endpoint**: `GET /api/images/search`
+    - **Endpoint**: `GET /images/search`
     - **Description**: Searches for images by keyword in their URL.
     - **Query Parameter**: `keyword` (string)
 
 4. **Get image by ID**
-    - **Endpoint**: `GET /api/images/{id}`
+    - **Endpoint**: `GET /images/{id}`
     - **Description**: Retrieves a single image by its ID.
 
 ### **Slideshow Management**
 1. **Add a new slideshow**
-    - **Endpoint**: `POST /api/slideshows/add`
+    - **Endpoint**: `POST /slideshows/add`
     - **Description**: Creates a new slideshow with an array of images containing URLs and durations.
     - **Request Body**:
       ```json
       {
         "images": [
           {
-            "url": "http://example.com/image1.jpg",
+            "url": "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
             "duration": 5
           },
           {
-            "url": "http://example.com/image2.jpg",
+            "url": "https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg",
             "duration": 3
           }
         ]
@@ -135,15 +135,15 @@ mvn spring-boot:run
       ```
 
 2. **Delete a slideshow**
-    - **Endpoint**: `DELETE /api/slideshows/delete/{id}`
+    - **Endpoint**: `DELETE /slideshows/delete/{id}`
     - **Description**: Deletes a slideshow by its ID.
 
 3. **Get slideshow order**
-    - **Endpoint**: `GET /api/slideshows/{id}/slideshowOrder`
+    - **Endpoint**: `GET /slideshows/{id}/slideshowOrder`
     - **Description**: Retrieves the order of images in a slideshow by its ID.
 
 4. **Proof of play**
-    - **Endpoint**: `POST /api/slideshows/{id}/proof-of-play/{imageId}`
+    - **Endpoint**: `POST /slideshows/{id}/proof-of-play/{imageId}`
     - **Description**: Records an event when an image is displayed in a slideshow.
 
 ---

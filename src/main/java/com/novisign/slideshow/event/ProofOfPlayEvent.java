@@ -5,7 +5,6 @@ import org.springframework.context.ApplicationEvent;
 
 @Getter
 public class ProofOfPlayEvent extends ApplicationEvent {
-
     private final Long slideshowId;
     private final String imageUrl;
 

@@ -5,7 +5,7 @@ import org.springframework.context.ApplicationEvent;
 
 @Getter
 public class ImageEvent extends ApplicationEvent {
-    private final String action; // e.g., "add", "delete"
+    private final String action;
     private final String message;
 
     public ImageEvent(Object source, String action, String message) {

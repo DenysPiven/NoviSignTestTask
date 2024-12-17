@@ -1,7 +1,10 @@
 package com.novisign.slideshow.service;
 
+import com.novisign.slideshow.exception.ResourceNotFoundException;
 import com.novisign.slideshow.model.Image;
+import com.novisign.slideshow.model.ProofOfPlay;
 import com.novisign.slideshow.model.Slideshow;
+import com.novisign.slideshow.repository.ProofOfPlayRepository;
 import com.novisign.slideshow.repository.SlideshowRepository;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -20,6 +23,8 @@ class SlideshowServiceTest {
 
     @Mock
     private SlideshowRepository slideshowRepository;
+    @Mock
+    private ProofOfPlayRepository proofOfPlayRepository;
     @Mock
     private ApplicationEventPublisher eventPublisher;
 
@@ -113,4 +118,71 @@ class SlideshowServiceTest {
         assertEquals("http://example.com/image1.jpg", result.get(0).getUrl());
         verify(slideshowRepository, times(1)).findById(slideshowId);
     }
+
+    @Test
+    void testRecordProofOfPlay_Success() {
+        // Arrange
+        Long slideshowId = 1L;
+        Long imageId = 2L;
+
+        Image image = new Image();
+        image.setId(imageId);
+        image.setUrl("http://example.com/image.jpg");
+
+        Slideshow slideshow = new Slideshow();
+        slideshow.setId(slideshowId);
+        slideshow.setImages(List.of(image));
+
+        when(slideshowRepository.findById(slideshowId)).thenReturn(Optional.of(slideshow));
+        when(proofOfPlayRepository.save(any(ProofOfPlay.class))).thenAnswer(invocation -> invocation.getArgument(0));
+
+        // Act
+        assertDoesNotThrow(() -> slideshowService.recordProofOfPlay(slideshowId, imageId));
+
+        // Assert
+        verify(slideshowRepository, times(1)).findById(slideshowId);
+        verify(proofOfPlayRepository, times(1)).save(any(ProofOfPlay.class));
+    }
+
+    @Test
+    void testRecordProofOfPlay_SlideshowNotFound() {
+        // Arrange
+        Long slideshowId = 1L;
+        Long imageId = 2L;
+
+        when(slideshowRepository.findById(slideshowId)).thenReturn(Optional.empty());
+
+        // Act & Assert
+        ResourceNotFoundException exception = assertThrows(ResourceNotFoundException.class,
+                () -> slideshowService.recordProofOfPlay(slideshowId, imageId));
+
+        assertEquals("Slideshow not found with ID: " + slideshowId, exception.getMessage());
+        verify(slideshowRepository, times(1)).findById(slideshowId);
+        verify(proofOfPlayRepository, never()).save(any());
+    }
+
+    @Test
+    void testRecordProofOfPlay_ImageNotFound() {
+        // Arrange
+        Long slideshowId = 1L;
+        Long imageId = 2L;
+
+        Image image = new Image();
+        image.setId(3L); // Інший ID
+
+        Slideshow slideshow = new Slideshow();
+        slideshow.setId(slideshowId);
+        slideshow.setImages(List.of(image));
+
+        when(slideshowRepository.findById(slideshowId)).thenReturn(Optional.of(slideshow));
+
+        // Act & Assert
+        ResourceNotFoundException exception = assertThrows(ResourceNotFoundException.class,
+                () -> slideshowService.recordProofOfPlay(slideshowId, imageId));
+
+        assertEquals("Image not found with ID: " + imageId + " in slideshow ID: " + slideshowId, exception.getMessage());
+        verify(slideshowRepository, times(1)).findById(slideshowId);
+        verify(proofOfPlayRepository, never()).save(any());
+    }
+
 }

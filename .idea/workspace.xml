@@ -4,49 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30c01b62-dd53-465b-befc-3aa99b1581f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/NoviSignTestTask.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestTask.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/SlideshowApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/controller/ImageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/controller/SlideshowController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/event/ImageEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/event/ProofOfPlayEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/event/SlideshowEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/exception/BadRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/exception/InternalServerErrorException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/listener/EventLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/model/EventLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/model/Image.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/model/ProofOfPlay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/model/Slideshow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/repository/EventLogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/repository/ImageRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/repository/ProofOfPlayRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/repository/SlideshowRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/EventLogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/ImageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/SlideshowService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-test.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/novisign/slideshow/SlideshowApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/novisign/slideshow/service/ImageServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/novisign/slideshow/service/SlideshowServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="30c01b62-dd53-465b-befc-3aa99b1581f1" name="Changes" comment="Add initial version.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/controller/ImageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/controller/SlideshowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/controller/SlideshowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/event/ImageEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/event/ImageEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/event/ProofOfPlayEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/event/ProofOfPlayEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/model/ProofOfPlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/model/ProofOfPlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/SlideshowService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/SlideshowService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/novisign/slideshow/SlideshowApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/novisign/slideshow/SlideshowApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/novisign/slideshow/service/SlideshowServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/novisign/slideshow/service/SlideshowServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +84,10 @@
     "Maven.slideshow [test].executor": "Run",
     "Maven.slideshow [validate].executor": "Run",
     "Maven.slideshow [verify].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -124,6 +99,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
     "vue.rearranger.settings.migration": "true"
@@ -134,7 +112,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.SlideshowApplicationTests.testFullSlideshowWorkflow">
+  <component name="RunManager" selected="Spring Boot.SlideshowApplication">
     <configuration name="ImageServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="slideshow" />
       <extension name="coverage">
@@ -222,11 +200,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SlideshowApplicationTests.testFullSlideshowWorkflow" />
         <item itemvalue="JUnit.SlideshowServiceTest" />
         <item itemvalue="JUnit.ImageServiceTest" />
-        <item itemvalue="JUnit.ImageServiceTest.testDeleteImage" />
         <item itemvalue="JUnit.SlideshowApplicationTests" />
+        <item itemvalue="JUnit.SlideshowApplicationTests.testFullSlideshowWorkflow" />
+        <item itemvalue="JUnit.ImageServiceTest.testDeleteImage" />
       </list>
     </recent_temporary>
   </component>
@@ -246,8 +224,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734382105558</updated>
-      <workItem from="1734382106735" duration="9597000" />
+      <workItem from="1734382106735" duration="13651000" />
     </task>
+    <task id="LOCAL-00001" summary="Add initial version.">
+      <option name="closed" value="true" />
+      <created>1734391987436</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1734391987436</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +251,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add initial version." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add initial version." />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -273,19 +264,19 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/novisign/slideshow/SlideshowApplicationTests.java</url>
-          <line>77</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/novisign/slideshow/service/SlideshowServiceTest.java</url>
-          <line>61</line>
+          <line>66</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/novisign/slideshow/service/ImageServiceTest.java</url>
           <line>57</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/SlideshowService.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
