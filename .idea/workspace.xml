@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30c01b62-dd53-465b-befc-3aa99b1581f1" name="Changes" comment="Add initial version.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="30c01b62-dd53-465b-befc-3aa99b1581f1" name="Changes" comment="Fixed slideshow after testing.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/controller/ImageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/controller/SlideshowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/controller/SlideshowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/event/ImageEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/event/ImageEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/event/ProofOfPlayEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/event/ProofOfPlayEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/model/ProofOfPlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/model/ProofOfPlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/event/ProofOfPlayEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/listener/EventLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/listener/EventLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/model/ProofOfPlay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/repository/ProofOfPlayRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/SlideshowService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/SlideshowService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/novisign/slideshow/SlideshowApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/novisign/slideshow/SlideshowApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/novisign/slideshow/service/SlideshowServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/novisign/slideshow/service/SlideshowServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,18 +29,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "DenysPiven"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;DenysPiven&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/DenysPiven/NoviSignTestTask",
-    "accountId": "4b9882f6-eb6f-42e3-b396-740fcc44c3ef"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DenysPiven/NoviSignTestTask&quot;,
+    &quot;accountId&quot;: &quot;4b9882f6-eb6f-42e3-b396-740fcc44c3ef&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/com/novisign/slideshow/controller/ImageController.java" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -56,9 +51,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2qJYNZGHu7vi5u7NDl3LYJpFpxf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -67,51 +62,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "JUnit.ImageServiceTest.executor": "Run",
-    "JUnit.ImageServiceTest.testAddImage.executor": "Run",
-    "JUnit.ImageServiceTest.testDeleteImage.executor": "Run",
-    "JUnit.ImageServiceTest.testIsValidImageUrl.executor": "Run",
-    "JUnit.SlideshowApplicationTests.executor": "Run",
-    "JUnit.SlideshowApplicationTests.testFullSlideshowWorkflow.executor": "Debug",
-    "JUnit.SlideshowServiceTest.executor": "Run",
-    "JUnit.SlideshowServiceTest.testDeleteSlideshow.executor": "Run",
-    "Maven.slideshow [clean].executor": "Run",
-    "Maven.slideshow [compile].executor": "Run",
-    "Maven.slideshow [install].executor": "Run",
-    "Maven.slideshow [test].executor": "Run",
-    "Maven.slideshow [validate].executor": "Run",
-    "Maven.slideshow [verify].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.SlideshowApplication.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;JUnit.ImageServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ImageServiceTest.testAddImage.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ImageServiceTest.testDeleteImage.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ImageServiceTest.testIsValidImageUrl.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SlideshowApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SlideshowApplicationTests.testFullSlideshowWorkflow.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.SlideshowServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SlideshowServiceTest.testDeleteSlideshow.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.slideshow [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.slideshow [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.slideshow [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.slideshow [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.slideshow [validate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.slideshow [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.SlideshowApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Spring Boot.SlideshowApplication">
     <configuration name="ImageServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="slideshow" />
@@ -224,7 +219,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734382105558</updated>
-      <workItem from="1734382106735" duration="13651000" />
+      <workItem from="1734382106735" duration="13877000" />
+      <workItem from="1734448937996" duration="480000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial version.">
       <option name="closed" value="true" />
@@ -234,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734391987436</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed slideshow after testing.">
+      <option name="closed" value="true" />
+      <created>1734438827138</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734438827138</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +257,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add initial version." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add initial version." />
+    <MESSAGE value="Fixed slideshow after testing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed slideshow after testing." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -265,7 +270,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/novisign/slideshow/service/SlideshowServiceTest.java</url>
-          <line>66</line>
+          <line>62</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -275,7 +280,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/SlideshowService.java</url>
-          <line>47</line>
+          <line>43</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>

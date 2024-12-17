@@ -3,9 +3,7 @@ package com.novisign.slideshow.service;
 import com.novisign.slideshow.event.SlideshowEvent;
 import com.novisign.slideshow.exception.ResourceNotFoundException;
 import com.novisign.slideshow.model.Image;
-import com.novisign.slideshow.model.ProofOfPlay;
 import com.novisign.slideshow.model.Slideshow;
-import com.novisign.slideshow.repository.ProofOfPlayRepository;
 import com.novisign.slideshow.repository.SlideshowRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,14 +18,12 @@ import java.util.Optional;
 public class SlideshowService {
 
     private final SlideshowRepository slideshowRepository;
-    private final ProofOfPlayRepository proofOfPlayRepository;
     private final ApplicationEventPublisher eventPublisher;
     private static final Logger logger = LoggerFactory.getLogger(SlideshowService.class);
 
     @Autowired
-    public SlideshowService(SlideshowRepository slideshowRepository, ProofOfPlayRepository proofOfPlayRepository, ApplicationEventPublisher eventPublisher) {
+    public SlideshowService(SlideshowRepository slideshowRepository, ApplicationEventPublisher eventPublisher) {
         this.slideshowRepository = slideshowRepository;
-        this.proofOfPlayRepository = proofOfPlayRepository;
         this.eventPublisher = eventPublisher;
     }
 
@@ -86,17 +82,6 @@ public class SlideshowService {
     }
 
     public void recordProofOfPlay(Long slideshowId, Long imageId) {
-        Slideshow slideshow = slideshowRepository.findById(slideshowId)
-                .orElseThrow(() -> new ResourceNotFoundException("Slideshow not found with ID: " + slideshowId));
-
-        Image image = slideshow.getImages().stream()
-                .filter(img -> img.getId().equals(imageId))
-                .findFirst()
-                .orElseThrow(() -> new ResourceNotFoundException("Image not found with ID: " + imageId + " in slideshow ID: " + slideshowId));
-
-        ProofOfPlay proof = new ProofOfPlay();
-        proof.setSlideshow(slideshow);
-        proof.setImageUrl(image.getUrl());
-        proofOfPlayRepository.save(proof);
+        logger.info("Proof of play recorded: SlideShow ID {} - Image ID {}", slideshowId, imageId);
     }
 }

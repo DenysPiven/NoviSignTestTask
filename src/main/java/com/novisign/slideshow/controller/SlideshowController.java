@@ -55,5 +55,4 @@ public class SlideshowController {
         slideshowService.recordProofOfPlay(id, imageId);
         return ResponseEntity.ok("Proof of play recorded for image ID: " + imageId + " in slideshow ID: " + id);
     }
-
 }

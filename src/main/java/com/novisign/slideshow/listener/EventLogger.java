@@ -1,7 +1,6 @@
 package com.novisign.slideshow.listener;
 
 import com.novisign.slideshow.event.ImageEvent;
-import com.novisign.slideshow.event.ProofOfPlayEvent;
 import com.novisign.slideshow.event.SlideshowEvent;
 import com.novisign.slideshow.service.EventLogService;
 import org.slf4j.Logger;
@@ -29,14 +28,6 @@ public class EventLogger {
     public void handleSlideshowEvent(SlideshowEvent event) {
         logger.info("Slideshow Event - Action: {}, Message: {}", event.getAction(), event.getMessage());
         eventLogService.logEvent("SLIDESHOW_" + event.getAction().toUpperCase(), event.getMessage());
-    }
-
-    @EventListener
-    public void handleProofOfPlayEvent(ProofOfPlayEvent event) {
-        logger.info("Proof-of-Play Event - Slideshow ID: {}, Image URL: {}",
-                event.getSlideshowId(), event.getImageUrl());
-        eventLogService.logEvent("PROOF_OF_PLAY",
-                "Slideshow ID: " + event.getSlideshowId() + ", Image URL: " + event.getImageUrl());
     }
 
 }
