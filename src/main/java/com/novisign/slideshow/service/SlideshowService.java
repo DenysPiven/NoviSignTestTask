@@ -1,7 +1,7 @@
 package com.novisign.slideshow.service;
 
 import com.novisign.slideshow.event.SlideshowEvent;
-import com.novisign.slideshow.exception.ResourceNotFoundException;
+import com.novisign.slideshow.exception.ProofOfPlayException;
 import com.novisign.slideshow.model.Image;
 import com.novisign.slideshow.model.Slideshow;
 import com.novisign.slideshow.repository.SlideshowRepository;
@@ -42,18 +42,10 @@ public class SlideshowService {
 
     public void deleteSlideshow(Long id) {
         logger.debug("Entering deleteSlideshow method with ID: {}", id);
-        Slideshow slideshow = slideshowRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Slideshow not found with ID: " + id));
-        slideshow.getImages().forEach(image -> {
-            String message = String.format("Image with URL %s removed from Slideshow ID: %d", image.getUrl(), id);
-            eventPublisher.publishEvent(new SlideshowEvent(this, "delete-image", message));
-            logger.info("Event published for image removal: {}", image.getUrl());
-        });
         slideshowRepository.deleteById(id);
         logger.info("Slideshow deleted with ID: {}", id);
         eventPublisher.publishEvent(new SlideshowEvent(this, "delete", "Slideshow deleted with ID: " + id));
     }
-
 
     public Optional<Slideshow> getSlideshowById(Long id) {
         logger.debug("Entering getSlideshowById method with ID: {}", id);
@@ -82,6 +74,14 @@ public class SlideshowService {
     }
 
     public void recordProofOfPlay(Long slideshowId, Long imageId) {
-        logger.info("Proof of play recorded: SlideShow ID {} - Image ID {}", slideshowId, imageId);
+        try {
+            Optional<Slideshow> slideshow = slideshowRepository.findById(slideshowId);
+            if (slideshow.isEmpty()) {
+                throw new ProofOfPlayException("Slideshow not found with ID: " + slideshowId);
+            }
+            logger.info("Proof of play recorded for image ID: {} in slideshow ID: {}", imageId, slideshowId);
+        } catch (Exception e) {
+            throw new ProofOfPlayException("An error occurred while recording proof-of-play: " + e.getMessage());
+        }
     }
 }

@@ -2,6 +2,7 @@ package com.novisign.slideshow.handler;
 
 import com.novisign.slideshow.exception.BadRequestException;
 import com.novisign.slideshow.exception.InternalServerErrorException;
+import com.novisign.slideshow.exception.ProofOfPlayException;
 import com.novisign.slideshow.exception.ResourceNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -44,4 +45,13 @@ public class GlobalExceptionHandler {
         response.put("message", ex.getMessage());
         return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+    @ExceptionHandler(ProofOfPlayException.class)
+    public ResponseEntity<Map<String, String>> handleProofOfPlayException(ProofOfPlayException ex) {
+        Map<String, String> response = new HashMap<>();
+        response.put("error", "Proof of Play Error");
+        response.put("message", ex.getMessage());
+        return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
 }

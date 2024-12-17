@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30c01b62-dd53-465b-befc-3aa99b1581f1" name="Changes" comment="Fixed slideshow after testing.">
+    <list default="true" id="30c01b62-dd53-465b-befc-3aa99b1581f1" name="Changes" comment="Remove proofOfPlay from db.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/exception/ProofOfPlayException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/controller/SlideshowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/controller/SlideshowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/event/ProofOfPlayEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/handler/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/listener/EventLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/listener/EventLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/model/ProofOfPlay.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/repository/ProofOfPlayRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/model/EventLog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/repository/EventLogRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/EventLogService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/ImageService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/SlideshowService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/SlideshowService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/novisign/slideshow/service/SlideshowServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/novisign/slideshow/service/SlideshowServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +108,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Spring Boot.SlideshowApplication">
+  <component name="RunManager" selected="JUnit.SlideshowApplicationTests">
     <configuration name="ImageServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="slideshow" />
       <extension name="coverage">
@@ -195,9 +196,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SlideshowApplicationTests" />
         <item itemvalue="JUnit.SlideshowServiceTest" />
         <item itemvalue="JUnit.ImageServiceTest" />
-        <item itemvalue="JUnit.SlideshowApplicationTests" />
         <item itemvalue="JUnit.SlideshowApplicationTests.testFullSlideshowWorkflow" />
         <item itemvalue="JUnit.ImageServiceTest.testDeleteImage" />
       </list>
@@ -220,7 +221,7 @@
       <option name="presentableId" value="Default" />
       <updated>1734382105558</updated>
       <workItem from="1734382106735" duration="13877000" />
-      <workItem from="1734448937996" duration="480000" />
+      <workItem from="1734448937996" duration="1640000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial version.">
       <option name="closed" value="true" />
@@ -238,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734438827138</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Remove proofOfPlay from db.">
+      <option name="closed" value="true" />
+      <created>1734449579767</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1734449579767</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,19 +267,20 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add initial version." />
     <MESSAGE value="Fixed slideshow after testing." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed slideshow after testing." />
+    <MESSAGE value="Remove proofOfPlay from db." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove proofOfPlay from db." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/ImageService.java</url>
-          <line>74</line>
+          <line>75</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/novisign/slideshow/service/SlideshowServiceTest.java</url>
-          <line>62</line>
+          <line>61</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

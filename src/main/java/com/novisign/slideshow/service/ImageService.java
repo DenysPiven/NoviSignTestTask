@@ -71,6 +71,7 @@ public class ImageService {
     }
 
     public boolean isValidImageUrl(String urlString) {
+        logger.debug("Entering getImageById method with URL: {}", urlString);
         try {
             URL url = new URL(urlString);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -80,6 +81,7 @@ public class ImageService {
             String contentType = connection.getContentType();
             return SUPPORTED_IMAGE_TYPES.contains(contentType);
         } catch (Exception e) {
+            logger.warn("Not found image with URL: {}", urlString);
             return false;
         }
     }
