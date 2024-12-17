@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30c01b62-dd53-465b-befc-3aa99b1581f1" name="Changes" comment="Simplify log logic.">
+    <list default="true" id="30c01b62-dd53-465b-befc-3aa99b1581f1" name="Changes" comment="Refactor slideshow delete images logic.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/model/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/model/Image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/model/Slideshow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/model/Slideshow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/SlideshowService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/SlideshowService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +69,7 @@
     "JUnit.SlideshowApplicationTests.executor": "Run",
     "JUnit.SlideshowApplicationTests.testFullSlideshowWorkflow.executor": "Debug",
     "JUnit.SlideshowServiceTest.executor": "Run",
+    "JUnit.SlideshowServiceTest.testAddSlideshow.executor": "Run",
     "JUnit.SlideshowServiceTest.testDeleteSlideshow.executor": "Run",
     "Maven.slideshow [clean].executor": "Run",
     "Maven.slideshow [compile].executor": "Run",
@@ -107,7 +105,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.SlideshowApplication">
+  <component name="RunManager" selected="JUnit.SlideshowServiceTest">
     <configuration name="ImageServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="slideshow" />
       <extension name="coverage">
@@ -119,22 +117,6 @@
       <option name="PACKAGE_NAME" value="com.novisign.slideshow.service" />
       <option name="MAIN_CLASS_NAME" value="com.novisign.slideshow.service.ImageServiceTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImageServiceTest.testDeleteImage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="slideshow" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.novisign.slideshow.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.novisign.slideshow.service" />
-      <option name="MAIN_CLASS_NAME" value="com.novisign.slideshow.service.ImageServiceTest" />
-      <option name="METHOD_NAME" value="testDeleteImage" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -185,6 +167,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SlideshowServiceTest.testAddSlideshow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="slideshow" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.novisign.slideshow.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.novisign.slideshow.service" />
+      <option name="MAIN_CLASS_NAME" value="com.novisign.slideshow.service.SlideshowServiceTest" />
+      <option name="METHOD_NAME" value="testAddSlideshow" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SlideshowApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="slideshow" />
@@ -195,11 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SlideshowApplicationTests" />
         <item itemvalue="JUnit.SlideshowServiceTest" />
         <item itemvalue="JUnit.ImageServiceTest" />
+        <item itemvalue="JUnit.SlideshowServiceTest.testAddSlideshow" />
+        <item itemvalue="JUnit.SlideshowApplicationTests" />
         <item itemvalue="JUnit.SlideshowApplicationTests.testFullSlideshowWorkflow" />
-        <item itemvalue="JUnit.ImageServiceTest.testDeleteImage" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +218,7 @@
       <option name="presentableId" value="Default" />
       <updated>1734382105558</updated>
       <workItem from="1734382106735" duration="13877000" />
-      <workItem from="1734448937996" duration="4517000" />
+      <workItem from="1734448937996" duration="4832000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial version.">
       <option name="closed" value="true" />
@@ -254,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734450643284</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Refactor slideshow delete images logic.">
+      <option name="closed" value="true" />
+      <created>1734453537138</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1734453537138</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +282,8 @@
     <MESSAGE value="Fixed slideshow after testing." />
     <MESSAGE value="Remove proofOfPlay from db." />
     <MESSAGE value="Simplify log logic." />
-    <option name="LAST_COMMIT_MESSAGE" value="Simplify log logic." />
+    <MESSAGE value="Refactor slideshow delete images logic." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor slideshow delete images logic." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -298,7 +305,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/novisign/slideshow/service/SlideshowService.java</url>
-          <line>50</line>
+          <line>49</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>

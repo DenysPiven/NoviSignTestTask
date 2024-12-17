@@ -37,13 +37,12 @@ public class SlideshowService {
         eventPublisher.publishEvent(new SlideshowEvent(this, "add", "Slideshow added with ID: " + savedSlideshow.getId()));
         if (slideshow.getImages() != null) {
             for (Image image : slideshow.getImages()) {
-                imageRepository.save(image);
                 String message = String.format("Image with URL %s added to Slideshow ID: %d", image.getUrl(), savedSlideshow.getId());
                 eventPublisher.publishEvent(new SlideshowEvent(this, "add-image", message));
                 logger.info("Event published for image: {}", image.getUrl());
             }
         }
-        return slideshowRepository.save(slideshow);
+        return savedSlideshow;
     }
 
 
