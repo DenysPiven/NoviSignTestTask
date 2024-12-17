@@ -161,12 +161,6 @@ mvn spring-boot:run
     - `id`: Primary Key
     - `images`: List of images with URLs and durations
 
-3. **Event Logs**:
-    - `id`: Primary Key
-    - `event_type`: Type of event (e.g., IMAGE_ADDED, SLIDESHOW_DELETED)
-    - `message`: Description of the event
-    - `timestamp`: Time of the event
-
 ---
 
 ## **Testing**
@@ -177,9 +171,3 @@ mvn spring-boot:run
       ```
 2. Integration tests:
     - Ensure H2 database is configured for testing.
-
----
-
-## **Contact**
-For any issues or queries, please reach out to [your-email@example.com].
-

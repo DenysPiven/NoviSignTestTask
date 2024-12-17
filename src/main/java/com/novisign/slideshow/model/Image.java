@@ -18,7 +18,7 @@ public class Image {
     private String url;
 
     @Positive(message = "Duration must be positive")
-    private int duration; // in seconds
+    private int duration;
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt = LocalDateTime.now();

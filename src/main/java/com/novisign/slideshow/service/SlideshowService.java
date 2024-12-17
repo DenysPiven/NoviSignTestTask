@@ -4,6 +4,7 @@ import com.novisign.slideshow.event.SlideshowEvent;
 import com.novisign.slideshow.exception.ProofOfPlayException;
 import com.novisign.slideshow.model.Image;
 import com.novisign.slideshow.model.Slideshow;
+import com.novisign.slideshow.repository.ImageRepository;
 import com.novisign.slideshow.repository.SlideshowRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,13 +19,15 @@ import java.util.Optional;
 public class SlideshowService {
 
     private final SlideshowRepository slideshowRepository;
+    private final ImageRepository imageRepository;
     private final ApplicationEventPublisher eventPublisher;
     private static final Logger logger = LoggerFactory.getLogger(SlideshowService.class);
 
     @Autowired
-    public SlideshowService(SlideshowRepository slideshowRepository, ApplicationEventPublisher eventPublisher) {
+    public SlideshowService(SlideshowRepository slideshowRepository, ApplicationEventPublisher eventPublisher, ImageRepository imageRepository) {
         this.slideshowRepository = slideshowRepository;
         this.eventPublisher = eventPublisher;
+        this.imageRepository = imageRepository;
     }
 
     public Slideshow addSlideshow(Slideshow slideshow) {
@@ -32,13 +35,17 @@ public class SlideshowService {
         Slideshow savedSlideshow = slideshowRepository.save(slideshow);
         logger.info("Slideshow added with ID: {}", savedSlideshow.getId());
         eventPublisher.publishEvent(new SlideshowEvent(this, "add", "Slideshow added with ID: " + savedSlideshow.getId()));
-        savedSlideshow.getImages().forEach(image -> {
-            String message = String.format("Image with URL %s added to Slideshow ID: %d", image.getUrl(), savedSlideshow.getId());
-            eventPublisher.publishEvent(new SlideshowEvent(this, "add-image", message));
-            logger.info("Event published for image: {}", image.getUrl());
-        });
-        return savedSlideshow;
+        if (slideshow.getImages() != null) {
+            for (Image image : slideshow.getImages()) {
+                imageRepository.save(image);
+                String message = String.format("Image with URL %s added to Slideshow ID: %d", image.getUrl(), savedSlideshow.getId());
+                eventPublisher.publishEvent(new SlideshowEvent(this, "add-image", message));
+                logger.info("Event published for image: {}", image.getUrl());
+            }
+        }
+        return slideshowRepository.save(slideshow);
     }
+
 
     public void deleteSlideshow(Long id) {
         logger.debug("Entering deleteSlideshow method with ID: {}", id);
@@ -79,6 +86,13 @@ public class SlideshowService {
             if (slideshow.isEmpty()) {
                 throw new ProofOfPlayException("Slideshow not found with ID: " + slideshowId);
             }
+
+            boolean containsImage = slideshow.get().getImages().stream()
+                    .anyMatch(image -> image.getId().equals(imageId));
+            if (!containsImage) {
+                throw new ProofOfPlayException("Image ID " + imageId + " is not part of Slideshow ID: " + slideshowId);
+            }
+
             logger.info("Proof of play recorded for image ID: {} in slideshow ID: {}", imageId, slideshowId);
         } catch (Exception e) {
             throw new ProofOfPlayException("An error occurred while recording proof-of-play: " + e.getMessage());
